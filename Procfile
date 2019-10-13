@@ -1,1 +1,1 @@
-web: gunicorn {{ mutaelu }}.wsgi --log-file -
+web: gunicorn mutaelu.wsgi --log-file -
