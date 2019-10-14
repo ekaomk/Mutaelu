@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
     'apps.holy_place',
+    'fontawesome_5',
 ]
 
 MIDDLEWARE = [
