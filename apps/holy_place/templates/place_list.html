@@ -1,1 +1,21 @@
-zx\zz\asdasdsass
+<div class="row">
+    <div class="col-12">สถานที่แนะนำ</div>
+    {% block includes %}
+    <div class="col">
+
+        {% for place in recommend_place %}
+        {{ place.name }}
+        {% endfor %}
+
+    </div>
+    <div class="col-12">สถานที่ใกล้เคียง</div>
+    <div class="col">
+
+        {% for place in nearest_place %}
+        {{ place.name }}
+        คะแนน {{ place.rating }}
+        {% endfor %}
+
+    </div>
+    {% endblock includes %}
+</div>
