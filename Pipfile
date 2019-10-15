@@ -11,5 +11,6 @@ python_version = "3.6"
 django-heroku = "*"
 gunicorn = "*"
 django-fontawesome-5 = "*"
+pillow = "*"
 
 [dev-packages]
