@@ -1,21 +1,29 @@
+{% load category_color %}
+
 <div class="row">
-    <div class="col-12">สถานที่แนะนำ</div>
-    {% block includes %}
-    <div class="col">
-
-        {% for place in recommend_place %}
-        {{ place.name }}
-        {% endfor %}
-
+    <div class="col-12 mt-4 mb-4">
+        <h3>{{ type_name }}</h3>
     </div>
-    <div class="col-12">สถานที่ใกล้เคียง</div>
-    <div class="col">
-
-        {% for place in nearest_place %}
-        {{ place.name }}
-        คะแนน {{ place.rating }}
-        {% endfor %}
-
+    <div class="col-12">
+        <div class="row">
+            {% for place in items %}
+            <div class="col-3 w-100">
+                <div class="card">
+                    <img src="{{ place.img }}" class="card-img-top" alt="{{ place.name }}">
+                    <div class="card-body pt-2 pb-2 bg-{{ place.category|category_color }} ">
+                        <div class="card-title mt-2 text-center">
+                            <span class="category-title">{{ place.category }}</span>
+                            <span class="text-rating"><i class="fas fa-star-of-david"></i> {{ place.rating }} ({{ place.rating_count }})</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center text-title">{{ place.name }}</div>
+                {% if type_name == "สถานที่ใกล้เคียง" %}
+                <div class="text-center text-muted">ระยะห่าง {{ place.distance }} กิโลเมตร </div>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
     </div>
-    {% endblock includes %}
+
 </div>

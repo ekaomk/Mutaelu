@@ -1,9 +1,11 @@
 <div class="container-fluid">
 
-    <div class="container">
-        <div class="mt-5">
-            {% include "category.html" %}
-            {% include "place_list.html" %}
-        </div>
+
+    <div class="container mt-5">
+        {% include "category.html" %}
+        {% include "place_list.html" with type_name="สถานที่แนะนำ" items=holy_place_list.recommend_place %}
+        <br>
+        {% include "place_list.html" with type_name="สถานที่ใกล้เคียง" items=holy_place_list.nearest_place %}
     </div>
+    <br><br><br><br><br>
 </div>
