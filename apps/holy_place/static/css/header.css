@@ -1,2 +1,22 @@
 .toggle.ios, .toggle-on.ios, .toggle-off.ios { border-radius: 20rem; }
-  .toggle.ios .toggle-handle { border-radius: 20rem; }
+.toggle.ios .toggle-handle { border-radius: 20rem; }
+.fc-white, fc-white:hover{
+  color:#fff !important;
+}
+
+.category-title{
+  font-size: 1.3rem;
+  color:#fff;
+  display: inline-block;
+}
+
+.text-rating {
+  font-size: 0.8rem;
+  color:#fff;
+  display: inline-block;
+  margin-left: 1rem;
+}
+
+.text-title{
+  font-size: 1.3rem;
+}
