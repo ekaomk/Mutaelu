@@ -1,10 +1,9 @@
 <!-- Content here -->
-{% load category_color %}
 
 <div class="row">
-    {% for cats in category %}
+    {% for category in categorys %}
     <div class="col mb-2">
-        <button type="button" class="btn btn-lg w-100 btn-{{cats|category_color}} fc-white">{{ cats }}</button>
+        <button type="button" class="btn btn-lg w-100 fc-white" style="background-color: {{ category.color }};">{{ category.name }}</button>
     </div>
     {% endfor %}
     
