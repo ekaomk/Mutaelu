@@ -10,7 +10,7 @@
             {% for place in places %}
             <div class="col-3 w-100">
                 <div class="card">
-                    <img src="media/{{ place.thumbnail_image }}" class="card-img-top" alt="{{ place.name }}" style="width: 15.8125rem; height: 18.625rem;">
+                    <img src="media/{{ place.thumbnail_image }}" class="card-img-top img-fluid" alt="{{ place.name }}" style="width: 15.8125rem; height: 18.625rem;">
                     <div class="card-body pt-2 pb-2" style="background-color: {{ place.category.color }};">
                         <div class="card-title mt-2 text-center">
                             <span class="category-title">{{ place.category.name }}</span>
