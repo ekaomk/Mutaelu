@@ -15,5 +15,5 @@ class Place(models.Model):
     name = models.CharField(max_length=255)
     rating = models.DecimalField(max_digits=2, decimal_places=1)
     rate_count = models.IntegerField()
-    thumbnail_image = models.ImageField(upload_to = file_helper.PathAndRename(f"{settings.MEDIA_PATH}/place_thumbnail_image/"))
+    thumbnail_image = models.ImageField(upload_to = file_helper.PathAndRename(f"place_thumbnail_image/"))
 
