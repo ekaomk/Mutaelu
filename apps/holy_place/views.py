@@ -23,9 +23,3 @@ def category(request, category_name):
     context["places"] = Place.objects.filter(category_id=category.id).select_related()
     context["title"] = category.name
     return render(request, 'index.html', context)
-
-def category_other(request):
-    context = {}
-    context["categorys"] = Category.objects.filter(show_in_home=True).all()
-    context["places"] = Place.objects.select_related('category').filter(category__show_in_home=False).all()
-    return render(request, 'index.html', context)
