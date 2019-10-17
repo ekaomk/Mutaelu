@@ -3,9 +3,7 @@
 
     <div class="container mt-5">
         {% include "category.html" %}
-        {% include "place_list.html" with type_name="สถานที่แนะนำ" places=places %}
-        <br>
-        {% include "place_list.html" with type_name="สถานที่ใกล้เคียง" places=places %}
+        {% include "place_list.html" with places=places %}
     </div>
     <br><br><br><br><br>
 </div>
